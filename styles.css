@@ -1,0 +1,206 @@
+/* ----- Resets Start ----- */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", serif;
+    font-size: 1rem;
+    line-height: 150%;
+    color: var(--darkslate);
+}
+
+/* ----- Resets End ----- */
+
+/* ----- Global Start----- */
+
+:root {
+        /* colors */
+    --tomato: #ff6257;
+    --darkslate: #242742;
+    --charcoal: #36384D;
+    --grey: #9294a0;
+}
+
+.roboto {
+    font-family: "Roboto", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+  }
+
+
+/* ----- Global End----- */
+/* ----- Main Start ----- */
+
+body {
+    display: flex;
+    background-color: var(--darkslate);
+    width: 100vw;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+
+main {
+    display: flex;
+    width: min(100vw, 928px);
+    padding: 1.5rem 0rem;
+    border-radius: 38px;
+    background-color: white;
+    align-items: center;
+}
+
+#headerdesktop {
+    width: 400px;
+    aspect-ratio: 400 / 593;
+    border-radius: 16px;
+    margin-right: 1.5rem;
+}
+
+#headermobile {
+    display: none;
+}
+
+h2 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    line-height: 100%;
+}
+
+#copy {
+    margin: 0rem 4rem;
+}
+
+h2 + p {
+    margin: 1.5rem 0rem;
+}
+
+li {
+    list-style-image: url(./assets/images/icon-list.svg);
+    list-style-position: inside;
+    margin-bottom: 0.625rem;
+}
+
+form {
+    margin-top: 1.875rem;
+}
+
+input {
+    display: block;
+}
+
+input:first-of-type {
+    margin-bottom: 1.5rem;
+}
+
+label {
+    font-size: 0.75rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+input:last-of-type, button {
+    width: min(87.2vw, 376px);
+    aspect-ratio: 376 / 56;
+    background-color: var(--darkslate);
+    border-radius: 8px;
+    border: none;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+input:last-of-type:hover, button:hover {
+    background-image: radial-gradient(#FF6A3A, #FF527B);
+}
+
+input:last-of-type:active, button:active {
+    background-image: radial-gradient(#FF6A3A, #FF527B);
+    box-shadow: 0px 15px 30px 0px #FF6155;
+}
+
+/* ----- Main End ----- */
+/* ----- Success Message Start */
+
+#successmessage {
+    display: none;
+    width: min(100vw, 504px);
+    aspect-ratio: 504 / 520;
+    background-color: white;
+    padding: 4rem;
+    padding-top: 3rem;
+    border-radius: 36px;
+
+    h2 {
+        margin-top: 2.5rem;
+        font-size: 3.5rem;
+    }
+
+    button {
+        margin-top: 1rem;
+    }
+}
+
+/* ----- Success Message End ----- */
+/* ----- Mobile Start ----- */
+
+@media screen and (max-width: 928px) {
+    
+    main {
+        display: flex;
+        flex-direction: column;
+        font-size: 4.2667vw;
+        border-radius: 0;
+        padding: 0;
+    }
+
+    #headerdesktop {
+        display: none;
+    }
+
+    #headermobile {
+        display: block;
+        width: 100vw;
+        /* aspect-ratio: 375 / 284; */
+        margin: 0;
+    }
+
+    #copy {
+        margin: 2.5rem 1.5rem;
+        justify-items: center;
+    }
+
+    h2 {
+        font-size: 10.667vw;
+    }
+
+    #successmessage {
+        height: 100vh;
+        padding: 18.35vh 6.4vw;
+        padding-bottom: 0;
+        border-radius: 0;
+        position: relative;
+
+        button {
+            position: fixed;
+            bottom: 4.9%;
+            margin-left: auto;
+            margin-right: auto;
+            left: 0;
+            right: 0;
+        }
+    }
+
+}
+/* ----- Mobile End ----- */
+
+/* ----- toggles ----- */
+.hidden {
+    display: none;
+  }
+
+  #successmessage.visible {
+    display: block;
+  }
